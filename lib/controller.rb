@@ -15,4 +15,8 @@ class ApplicationController < Sinatra::Base
     redirect '/'
     puts "Ce programme ne fait rien pour le moment, on va donc afficher un message dans le terminal"
   end
+
+  get '/gossips/:index/' do
+    Gossip.find("#{params['index']}")
+  end
 end

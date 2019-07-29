@@ -21,4 +21,8 @@ class Gossip
         end
         return all_gossips
     end
+    
+    def self.find(index)
+      self.all[@index]
+  end
 end
